@@ -13,7 +13,7 @@ jobs:
         with:
           debug: true
           script: |
-            rest.git.createRef({
+            github.rest.git.createRef({
               owner: context.repo.owner,
               repo: context.repo.repo,
               ref: "refs/tags/1.0.0",
