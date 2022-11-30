@@ -18,7 +18,5 @@ jobs:
               tag: "1.0.0",
               message: "",
               object: context.sha,
-              type: "commit",
-              tagger.name: context.payload.pusher.name,
-              tagger.email: context.payload.pusher.email 
+              type: "commit"
             })
