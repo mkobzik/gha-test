@@ -12,6 +12,7 @@ jobs:
       - uses: actions/github-script@v6
         with:
           script: |
-            console.log(context)
-            console.log(context.repo.defaultBranch)
+            console.log(context.payload)
+            console.log(context.payload.repository)
+            console.log(context.payload.repository.default_branch)
 
