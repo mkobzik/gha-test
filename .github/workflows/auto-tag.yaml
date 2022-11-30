@@ -12,11 +12,6 @@ jobs:
       - uses: actions/github-script@v6
         with:
           script: |
-            const ref = "gha-" + context.repo.default_branch + "-" + context.sha.substring(0, 7)
+            console.log(context)
+            console.log(context.repo.defaultBranch)
 
-            github.rest.git.createRef({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              ref: ref,
-              sha: context.sha
-            })
