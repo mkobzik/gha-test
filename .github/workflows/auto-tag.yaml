@@ -12,7 +12,12 @@ jobs:
       - uses: actions/github-script@v6
         with:
           script: |
-            console.log(context.payload)
-            console.log(context.payload.repository)
-            console.log(context.payload.repository.default_branch)
+            const ref = "refs/tags/gha-" + context.payload.repository.default_branch + "-" + context.sha.substring(0, 7)
+
+            github.rest.git.createRef({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              ref: ref,
+              sha: context.sha
+            })
 
