@@ -8,8 +8,6 @@ on:
 jobs:
   tag:
     runs-on: ubuntu-latest
-    permissions:
-      ???
     steps:
       - uses: actions/github-script@v6
         with:
