@@ -11,7 +11,9 @@ jobs:
     steps:
       - uses: actions/github-script@v6
         with:
+          debug: true
           script: |
+            console.log(context)
             github.rest.git.createTag({
               owner: context.repo.owner,
               repo: context.repo.repo,
