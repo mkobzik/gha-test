@@ -13,17 +13,3 @@ jobs:
         with:
           script: |
             console.log(context)
-            # github.rest.git.createTag({
-            #   owner: context.repo.owner,
-            #   repo: context.repo.repo,
-            #   tag: ,
-            #   message: "",
-            #   object: ,
-            #   type: commit,
-            #   tagger.name: ,
-            #   tagger.email: 
-            # })
-
-
-
-
