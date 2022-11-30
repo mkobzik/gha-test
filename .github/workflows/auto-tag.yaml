@@ -19,13 +19,3 @@ jobs:
               ref: "refs/tags/1.0.0",
               sha: context.sha
             })
-            # var result = await github.rest.git.createTag({
-            #   owner: context.repo.owner,
-            #   repo: context.repo.repo,
-            #   tag: "1.0.0",
-            #   message: "",
-            #   object: context.sha,
-            #   type: "commit"
-            # })
-
-            # console.log(result)
